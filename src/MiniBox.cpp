@@ -8,7 +8,7 @@
 int main(int argc, char *argv[])
 {
     char *_basename = basename(argv[0]);
-	if (strcmp(_basename, BINARY_NAME) == 0)
+	if (strcmp(_basename, "minibox") == 0)
 	{
 		if (argc == 1)
 		{
