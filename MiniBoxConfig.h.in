@@ -1,0 +1,7 @@
+#ifndef CONFIG
+#define CONFIG
+
+#define ON 1
+#define OFF 0
+
+#endif
