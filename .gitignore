@@ -48,3 +48,6 @@
 
 # I dont know what it is
 *.save
+
+# Build folder
+build/
