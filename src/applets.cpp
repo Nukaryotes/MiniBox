@@ -18,8 +18,12 @@ void applets_call(int argc, char *argv[])
 	{ /*This will never execute*/
 	}
 
-	//Here else if statements for calling applet's main function
-	//will written here in future when new applets will be added.
+#if ECHO_BUILD == ON
+	else if (strcmp(argv[1], "echo") == 0)
+	{
+		echo_main(_argc, _argv);
+	}
+#endif
 
 	else
 	{
@@ -35,8 +39,12 @@ void applets_as_main(int argc, char *argv[])
 	{ /*This will never execute*/
 	}
 
-	//Here else if statements for calling applet's main function
-        //will written here in future when new applets will be added.
+#if ECHO_BUILD == ON
+	else if (strcmp(_basename, "echo") == 0)
+	{
+		echo_main(argc, argv);
+	}
+#endif
 
 	else
 	{
