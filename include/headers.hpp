@@ -25,7 +25,7 @@ void version()
 {
 	std::cout <<
 "MiniBox Version 0.1\n"
-"This sodtware is still under development and is not yet ready for use in"
+"This software is still under development and is not yet ready for use in"
 "productional purpose. Though can be used for educatinal purpose.\n\n"
 "Written by Ayush K M\n";
 	exit(0);
