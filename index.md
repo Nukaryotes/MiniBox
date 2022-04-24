@@ -17,4 +17,4 @@ _Written by Ayush K M_
 _24 APRIL 2022_
 
 # Contact Us
-EMAIL ADDRESS: **[kmayushkm@gmail.com] (http://google.com)**
+EMAIL ADDRESS: [kmayushkm@gmail.com] (http://google.com)
