@@ -25,6 +25,13 @@ void applets_call(int argc, char *argv[])
 	}
 #endif
 
+#if PWD_BUILD == ON
+	else if (strcmp(argv[1], "pwd") == 0)
+	{
+		pwd_main(_argc, _argv);
+	}
+#endif
+
 	else
 	{
 		std::cout << argv[1] << ": Unknown Command\n";
@@ -46,6 +53,12 @@ void applets_as_main(int argc, char *argv[])
 	}
 #endif
 
+#if PWD_BUILD == ON
+	else if (strcmp(_basename, "pwd") == 0)
+	{
+		pwd_main(argc, argv);
+	}
+#endif
 	else
 	{
 		std::cout << argv[0] << ": Unknown command\n";

@@ -6,9 +6,10 @@ set(TARGET_BINARY "minibox")
 
 # Options
 option(ECHO_INCLUDE "Include echo command into the executable" ON)
+option(PWD_INCLUDE "Include pwd command into the executable" ON)
 
 set(ECHO_BUILD ${ECHO_INCLUDE})
-
+set(PWD_BUILD ${PWD_INCLUDE})
 
 if(ECHO_INCLUDE STREQUAL ON)
 	set(ECHO_SOURCE_FILE src/coreutils/echo.cpp)
@@ -16,6 +17,11 @@ elseif()
 	set(ECHO_SOURCE_FILE "")
 endif()
 
+if(PWD_INCLUDE STREQUAL ON)
+	set(PWD_SOURCE_FILE src/coreutils/pwd.cpp)
+elseif()
+	set(PWD_SOURCE_FILE "")
+endif()
 
 configure_file(MiniBoxConfig.h.in config.h)
 
@@ -26,6 +32,7 @@ add_executable(
 	src/applets.cpp
 
 	${ECHO_SOURCE_FILE}
+	${PWD_SOURCE_FILE}
 )
 
 target_include_directories(
